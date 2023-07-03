@@ -15,6 +15,7 @@ let modalH2 = document.getElementById("modal-h2");
 menu.onclick = function menuItems() {
   nav1.style.display = "none";
   mainNav.style.display = "none";
+  modalContent.style.display = "none";
   dropDown.style.display = "block";
 };
 cancel.onclick = function cancelDropdown() {
@@ -24,6 +25,7 @@ cancel.onclick = function cancelDropdown() {
 };
 searchIcon.onclick = function searchModalPop() {
   searchModal.style.display = "flex";
+  dropDown.style.display = "none";
   // searchModal.style.display = "block";
 };
 searchIconMini.onclick = function searchModalPop() {
@@ -34,7 +36,7 @@ searchBtn.onclick = function searchBtn() {
   if (searchInput.value === "") {
     searchModal.style.display = "flex";
     searchInput.placeholder = "Your Search is still empty";
-    searchInput.placeholder.style.color = "blue";
+    searchInput.placeholder.style.color = "red";
   } else {
     modalContentDdiv.style.display = "none";
     let newTag = document.createElement("h2");
